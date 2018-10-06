@@ -18,9 +18,9 @@ Note: Make sure that your source code is under src directory.
 
 ### Animated examples
 
-![Insert namespace](http://portfolio.damianbalandowski.com/vs-phpclassgen/insert_ns.gif)
-![Generate PHP class](http://portfolio.damianbalandowski.com/vs-phpclassgen/gen_class.gif)
-![Generate PHP interface](http://portfolio.damianbalandowski.com/vs-phpclassgen/gen_interface.gif)
+![Insert namespace](https://media.giphy.com/media/k6rabYSQx2RcwbQKed/giphy.gif)
+![Generate PHP class](https://media.giphy.com/media/YkYfRwCfT1AUK25s4J/giphy.gif)
+![Generate PHP interface](https://media.giphy.com/media/uUmQ2ppXe2Ysrqoptv/giphy.gif)
 
 
 ## Features
