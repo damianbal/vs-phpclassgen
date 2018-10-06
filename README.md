@@ -1,5 +1,7 @@
 # PHP Class Generator
 
+[Download extension from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=damianbal.vs-phpclassgen)
+
 Simple extenstion for PHP which will generate PHP class out of file, for example if file is in src/MyApp/Services/BlaService.php
 
 The result would be
