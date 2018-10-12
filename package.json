@@ -2,7 +2,7 @@
     "name": "vs-phpclassgen",
     "displayName": "PHP Class Generator",
     "description": "Generate class and namespace out of file path",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "damianbal",
     "engines": {
         "vscode": "^1.27.0"
