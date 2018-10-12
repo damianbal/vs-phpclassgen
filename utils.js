@@ -17,13 +17,17 @@ module.exports = {
 
         let srcIndex = pathElements.lastIndexOf("src");
 
+        let indexAddition = 1;
+
         // src dir not found so use it might be Laravel (use app directory instead of src)
         if(srcIndex === -1)
         {   
             srcIndex = pathElements.lastIndexOf("app");
+            indexAddition = 0;
         }
 
-        let namespaceElements = pathElements.slice(srcIndex + 1,
+
+        let namespaceElements = pathElements.slice(srcIndex + indexAddition,
             pathElements.lastIndexOf(className)).map(pathElement => {
                 // every namespace need to be capitalized
                 return pathElement.charAt(0).toUpperCase() + pathElement.slice(1);
