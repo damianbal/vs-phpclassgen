@@ -33,20 +33,25 @@ module.exports = {
                 return pathElement.charAt(0).toUpperCase() + pathElement.slice(1);
             })
 
-        return namespaceElements.join("\\");
+        return  { 
+            isLaravel: (indexAddition == 0) ? true : false,
+            ns: namespaceElements.join("\\") 
+        };
     },
     generateCode: function (filePath, prefix = "class", nsVendor = "") {
         let ns = this.getNamespaceFromPath(filePath)
         let cn = this.getClassNameFromPath(filePath)
 
-        if(nsVendor.length > 1)
+        let namespace = ns.ns 
+
+        if(nsVendor.length > 1 && !ns.isLaravel)
         {
-            ns = nsVendor + "\\" + ns
+            namespace = nsVendor + "\\" + namespace
         }
 
         return `<?php
 
-namespace ${ns};
+namespace ${namespace};
 
 ${prefix} ${cn}
 {
