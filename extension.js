@@ -73,6 +73,29 @@ function activate(context) {
     });
 
     context.subscriptions.push(disposable2)
+
+    let disposable3 = vscode.commands.registerCommand('phpclassgen.generate_trait', function () {
+
+        let editor = vscode.window.activeTextEditor;
+        let path = editor.document.fileName;
+
+        let nsVendor = "";
+
+        let config = vscode.workspace.getConfiguration('phpclassgen');
+
+        if (config.has('vendor')) {
+            if (config.get('vendor').length > 1) {
+                nsVendor = config.get('vendor');
+            }
+        }
+
+        editor.edit(eb => {
+            eb.replace(new vscode.Position(editor.selection.active.line, 0), utils.generateCode(path, "trait", nsVendor));
+        })
+
+    });
+
+    context.subscriptions.push(disposable3)
 }
 exports.activate = activate;
 

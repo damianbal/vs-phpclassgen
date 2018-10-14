@@ -16,7 +16,7 @@ class BlaService
 }
 ```
 
-Note: Make sure that your source code is under src directory.
+Note: Make sure that your source code is under src directory, or app if it is Laravel.
 
 ### Animated examples
 
@@ -29,14 +29,16 @@ Note: Make sure that your source code is under src directory.
 
 * Insert PS4 Namespace out of file path
 * Generate PHP class matching file path
-* Generate PHP class matching file path
+* Generate PHP interface matching file path
+* Generate PHP trait matching file path
+* Works with Laravel
 
 ## Commands
 
 * Insert PHP Namespace - inserts only namespace
 * Generate PHP Class - generates what is above in example
 * Generate PHP Interface - same as above but instead of class it will be interface
-
+* Generate PHP Trait - generates PHP trait
 
 ## Extension Settings
 

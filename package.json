@@ -2,7 +2,7 @@
     "name": "vs-phpclassgen",
     "displayName": "PHP Class Generator",
     "description": "Generate class and namespace out of file path",
-    "version": "0.0.22",
+    "version": "0.0.23",
     "publisher": "damianbal",
     "engines": {
         "vscode": "^1.27.0"
@@ -13,7 +13,8 @@
     "activationEvents": [
         "onCommand:phpclassgen.generate_class",
         "onCommand:phpclassgen.generate_interface",
-        "onCommand:phpclassgen.insert_namespace"
+        "onCommand:phpclassgen.insert_namespace",
+        "onCommand:phpclassgen.generate_trait"
     ],
     "main": "./extension",
     "contributes": {
@@ -29,6 +30,10 @@
             {
                 "command": "phpclassgen.generate_interface",
                 "title": "Generate PHP Interface"
+            },
+            {
+                "command": "phpclassgen.generate_trait",
+                "title": "Generate PHP Trait"
             }
         ]
     },
