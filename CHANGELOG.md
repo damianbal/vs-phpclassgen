@@ -7,6 +7,8 @@ All notable changes to the "php-class-generator" extension will be documented in
 ## [0.0.2]
 ### Added
 - Laravel support.
+### Fixed
+- Bug with "Insert namespace"
 
 ## [0.0.23]
 - Added support for generating PHP traits.

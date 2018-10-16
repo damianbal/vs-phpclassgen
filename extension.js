@@ -19,9 +19,19 @@ function activate(context) {
         let editor = vscode.window.activeTextEditor;
         let path = editor.document.fileName;
 
-        editor.edit(eb => {
-            eb.replace(new vscode.Position(editor.selection.active.line, 0), "namespace " + nsVendor + utils.getNamespaceFromPath(path) + ";");
-        })
+        let ns = utils.getNamespaceFromPath(path)
+
+        if(ns.isLaravel) {
+            editor.edit(eb => {
+                eb.replace(new vscode.Position(editor.selection.active.line, 0), "namespace " + ns.ns + ";");
+            })
+        }
+        else {
+            editor.edit(eb => {
+                eb.replace(new vscode.Position(editor.selection.active.line, 0), "namespace " + nsVendor + ns.ns + ";");
+            })
+        }
+
 
     });
 
