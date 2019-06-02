@@ -12,3 +12,8 @@ All notable changes to the "php-class-generator" extension will be documented in
 
 ## [0.0.23]
 - Added support for generating PHP traits.
+
+## [0.1.0]
+- Bugfixes (extension will work on windows)
+- Settings can now be edited in settings editor
+- Updated all dependencies

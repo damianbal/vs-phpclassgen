@@ -21,7 +21,7 @@ function activate(context) {
 
         let ns = utils.getNamespaceFromPath(path)
 
-        if(ns.isLaravel) {
+        if (ns.isLaravel) {
             editor.edit(eb => {
                 eb.replace(new vscode.Position(editor.selection.active.line, 0), "namespace " + ns.ns + ";");
             })
@@ -31,8 +31,6 @@ function activate(context) {
                 eb.replace(new vscode.Position(editor.selection.active.line, 0), "namespace " + nsVendor + ns.ns + ";");
             })
         }
-
-
     });
 
     context.subscriptions.push(disposable);
@@ -48,7 +46,7 @@ function activate(context) {
 
         if (config.has('vendor')) {
             if (config.get('vendor').length > 1) {
-                nsVendor = config.get('vendor') ;
+                nsVendor = config.get('vendor');
             }
         }
 
@@ -72,7 +70,7 @@ function activate(context) {
 
         if (config.has('vendor')) {
             if (config.get('vendor').length > 1) {
-                nsVendor = config.get('vendor') ;
+                nsVendor = config.get('vendor');
             }
         }
 
@@ -109,5 +107,5 @@ function activate(context) {
 }
 exports.activate = activate;
 
-function deactivate() {}
+function deactivate() { }
 exports.deactivate = deactivate;
