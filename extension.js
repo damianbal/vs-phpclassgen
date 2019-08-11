@@ -11,7 +11,7 @@ function activate(context) {
         let config = vscode.workspace.getConfiguration('phpclassgen');
 
         if (config.has('vendor')) {
-            if (config.get('vendor').length > 1) {
+            if (config.get('vendor') && config.get('vendor').length > 1) {
                 nsVendor = config.get('vendor') + "\\";
             }
         }
@@ -45,7 +45,7 @@ function activate(context) {
         let config = vscode.workspace.getConfiguration('phpclassgen');
 
         if (config.has('vendor')) {
-            if (config.get('vendor').length > 1) {
+            if (config.get('vendor') && config.get('vendor').length > 1) {
                 nsVendor = config.get('vendor');
             }
         }
@@ -69,7 +69,7 @@ function activate(context) {
         let config = vscode.workspace.getConfiguration('phpclassgen');
 
         if (config.has('vendor')) {
-            if (config.get('vendor').length > 1) {
+            if (config.get('vendor') && config.get('vendor').length > 1) {
                 nsVendor = config.get('vendor');
             }
         }
@@ -92,7 +92,7 @@ function activate(context) {
         let config = vscode.workspace.getConfiguration('phpclassgen');
 
         if (config.has('vendor')) {
-            if (config.get('vendor').length > 1) {
+            if (config.get('vendor') && config.get('vendor').length > 1) {
                 nsVendor = config.get('vendor');
             }
         }

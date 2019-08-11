@@ -15,6 +15,10 @@ module.exports = {
 
         let indexAddition = 1;
 
+        if (srcIndex == -1) {
+            srcIndex = pathElements.lastIndexOf("tests");
+        }
+
         // src dir not found so use it might be Laravel (use app directory instead of src)
         if (srcIndex === -1) {
             srcIndex = pathElements.lastIndexOf("app");
